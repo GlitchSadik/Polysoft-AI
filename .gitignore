@@ -12,7 +12,6 @@ ENV/
 .DS_Store
 Thumbs.db
 .env
-.env.example
 policy_chatbot.db
 backend.log
 storage/chroma_db/
