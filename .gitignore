@@ -21,3 +21,4 @@ storage/docs/*.txt
 .pytest_cache/
 .coverage
 htmlcov/
+node_modules/
