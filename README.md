@@ -79,10 +79,7 @@ Frontend:
 └── requirements.txt       # Python dependencies
 ```
 
-## Installation
 
-git clone <your-repo-url>
-cd "Softvence Assesment"
 ### Prerequisites
 - Python 3.10+
 - Node.js 18+
