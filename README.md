@@ -81,8 +81,10 @@ Frontend:
 
 ## Installation
 
+git clone <your-repo-url>
+cd "Softvence Assesment"
 ### Prerequisites
-- Python 3.13+
+- Python 3.10+
 - Node.js 18+
 - OpenAI API key
 
@@ -90,61 +92,67 @@ Frontend:
 
 1. Clone the repository
 ```bash
-git clone <your-repo-url>
-cd "Softvence Assesment"
+git clone https://github.com/GlitchSadik/Polysoft-AI.git
+cd Polysoft-AI
 ```
 
-2. Create virtual environment
+2. Create and activate a virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-3. Install dependencies
+3. Install Python dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Configure environment
+4. Configure environment variables
 ```bash
 cp .env.example .env
 # Edit .env and add your OpenAI API key
 ```
 
 Required environment variables:
-```bash
+```env
 OPENAI_API_KEY=your_api_key_here
 OPENAI_MODEL=gpt-4o-mini
 OPENAI_TEMPERATURE=0.7
 OPENAI_MAX_TOKENS=1000
 ```
 
-5. Run backend
+5. Run the backend server
 ```bash
 python -m uvicorn app.main:app --reload --port 8000
 ```
 
-Backend: `http://localhost:8000`
-API docs: `http://localhost:8000/docs`
+Backend: http://localhost:8000
+API docs: http://localhost:8000/docs
 
 ### Frontend Setup
 
-1. Navigate to frontend
+1. Navigate to the frontend directory
 ```bash
 cd frontend
 ```
 
-2. Install dependencies
+2. Install Node.js dependencies
 ```bash
 npm install
 ```
 
-3. Run development server
+3. Start the frontend development server
 ```bash
 npm run dev
 ```
 
-Frontend: `http://localhost:3000`
+Frontend: http://localhost:3000
+
+---
+**Common Setup Issues:**
+- If you see errors about missing Python packages, double-check your virtual environment is activated and run `pip install -r requirements.txt` again.
+- If ports are busy, use a different port for backend: `python -m uvicorn app.main:app --port 8001`
+- If you get CORS errors, update allowed origins in `main.py`.
 
 ## Usage
 
